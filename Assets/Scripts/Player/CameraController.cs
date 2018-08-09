@@ -36,8 +36,8 @@ public class CameraController : MonoBehaviour
         //rotateAround.x            = Input.GetAxis("Mouse X");
         //rotateAround.y            = Input.GetAxis("Mouse Y");
 
-        rotateAround.x              = Input.GetAxis("Camera X") * Time.deltaTime * m_sensibilityX;
-        rotateAround.y              = Input.GetAxis("Camera Y") * Time.deltaTime * m_sensibilityY;
+        rotateAround.x              = InputManager.GetCameraX() * Time.deltaTime * m_sensibilityX;
+        rotateAround.y              = InputManager.GetCameraY() * Time.deltaTime * m_sensibilityY;
 
         float camAngle              = Vector3.Angle(this.transform.forward, Player.PlayerNode.m_centerPoint.up) - 90;
         rotateAround.y              = Mathf.Clamp(m_invertY ? rotateAround.y : -rotateAround.y, MIN_Y_ANGLE - camAngle, MAX_Y_ANGLE - camAngle);

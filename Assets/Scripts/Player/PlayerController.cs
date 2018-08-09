@@ -12,8 +12,8 @@ public class PlayerController : CharacterController
         // Ref: (Vector3.forward, Vector3.right)
         Vector2 nextDirection = Vector2.zero;
         
-        nextDirection.x = Input.GetAxis("Horizontal");
-        nextDirection.y = Input.GetAxis("Vertical");
+        nextDirection.x = InputManager.GetAxisHorizontal();
+        nextDirection.y = InputManager.GetAxisVertical();
 
         if (nextDirection != Vector2.zero)
         {
@@ -29,6 +29,6 @@ public class PlayerController : CharacterController
     // ============================================================================== //
     override protected bool GetInputSneak()
     {
-        return Input.GetAxis("Trigger Right") > .5f;
+        return InputManager.GetButtonSneak();
     }
 }

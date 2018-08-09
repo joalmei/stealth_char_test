@@ -17,20 +17,20 @@ public abstract class CharacterController : MonoBehaviour
     }
 
     // ------------------------------ PUBLIC ATTRIBUTES ----------------------------- //
-    public float                        m_runSpeed = 0.1f;
-    public float                        m_sneakSpeed = 0.05f;
-    public float                        m_turnSpeed = 10;
-    public float                        m_stopSpeed = 5;
+    public float                        m_runSpeed          = 0.1f;
+    public float                        m_sneakSpeed        = 0.05f;
+    public float                        m_turnSpeed         = 10;
+    public float                        m_stopSpeed         = 5;
     public CharacterAnimatorController  m_animator;
 
     // ------------------------------ PRIVATE ATTRIBUTES ---------------------------- //
-    protected eState                      m_state = eState.Idle;
-    protected float                       m_speed = 0;
+    protected eState                    m_state             = eState.Idle;
+    protected float                     m_speed             = 0;
 
-    protected const float                 MIN_SPEED_TO_STOP = 0.1f;
-    protected const float                 MIN_ANGLE_TO_TURN = 150;
+    protected const float               MIN_SPEED_TO_STOP   = 0.1f;
+    protected const float               MIN_ANGLE_TO_TURN   = 150;
 
-    protected const float                 SPEED_ACCELERATION = 2.5f;
+    protected const float               SPEED_ACCELERATION  = 2.5f;
 
 
     // ============================================================================== //
