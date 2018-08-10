@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CharacterController : MonoBehaviour
+public abstract class CharController : MonoBehaviour
 {
     // -------------------------------- PUBLIC ENUMS -------------------------------- //
     public enum eState
@@ -12,8 +12,13 @@ public abstract class CharacterController : MonoBehaviour
         Running,
         //Stopping, TODO
         Turning,
+
         SneakIdle,
-        SneakWalk
+        SneakWalk,
+
+        //WallIdle,
+        //WallLeft,
+        //WallRight
     }
 
     // ------------------------------ PUBLIC ATTRIBUTES ----------------------------- //
